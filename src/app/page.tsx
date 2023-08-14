@@ -1,18 +1,9 @@
 "use client";
-import {
-  Button,
-  Container,
-  Logo,
-  Menu,
-  MobileMenu,
-  Wrapper,
-} from "@/components";
+import { Button, Container, Logo, Wrapper } from "@/components";
 
 export default function Home() {
   return (
-    <main className="min-h-screen ">
-      <Menu />
-      <MobileMenu />
+    <>
       <Container className="py-20">
         <div className="space-y-8 text-center">
           <h1 className="text-4xl font-bold text-center">
@@ -33,32 +24,32 @@ export default function Home() {
         </div>
       </Container>
       <Container className="bg-palette-green">
-        <div className="md:flex md:space-x-4">
-          {[0, 1, 2].map((index) => (
-            <Wrapper
-              className="text-center hover:text-white hover:bg-black hover:scale-105 ease-in-out duration-200 relative"
-              key={index}
-            >
-              <span className="absolute -top-5 text-3xl md:-top-5 left-0 right-0">
-                📍
-              </span>
-              <h3 className="text-2xl font-bold text-center">
-                Teir {index + 1}
-              </h3>
-              <ul className="flex-col items-center space-y-2">
-                {[0, 1, 2, 3].map((index) => (
-                  <li key={index} className="">
-                    Lorem ipsum dolor
-                  </li>
-                ))}
-              </ul>
-            </Wrapper>
-          ))}
-        </div>
+        {/* <div className="md:flex md:space-x-4">
+            {[0, 1, 2].map((index) => (
+              <Wrapper
+                className="text-center hover:text-white hover:bg-black hover:scale-105 ease-in-out duration-200 relative"
+                key={index}
+              >
+                <span className="absolute -top-5 text-3xl md:-top-5 left-0 right-0">
+                  📍
+                </span>
+                <h3 className="text-2xl font-bold text-center">
+                  Teir {index + 1}
+                </h3>
+                <ul className="flex-col items-center space-y-2">
+                  {[0, 1, 2, 3].map((index) => (
+                    <li key={index} className="">
+                      Lorem ipsum dolor
+                    </li>
+                  ))}
+                </ul>
+              </Wrapper>
+            ))}
+          </div> */}
       </Container>
       <Container className="bg-palette-yellow">
         <Logo />
       </Container>
-    </main>
+    </>
   );
 }
